@@ -40,6 +40,29 @@ const animali = [
 
 ];
 
+//Stampiamo in console l'array appena creato per poterne controllare i valori
+
+console.log(animali);
+
 //Array vuoto che conterrà solo gli oggetti con classe 'mammiferi'
 
-mammiferi = [];
+const mammiferi = [];
+
+//Ciclo For per controllare l'attributo classe degli oggetti in animali[] e popolare l'array mammiferi
+
+for (let i = 0; i < animali.length; i++) {
+    //Salviamo l'oggetto corrispondente all'indice corrente in una variabile
+    const currentAnimal = animali[i];
+
+    //Controlliamo se alla chiave classe corrisponde il valore 'mammiferi' e nel caso la condizione si verifichi pushiamo currentAnimal in mammiferi[]
+    if (currentAnimal.classe === 'mammiferi') {
+
+        mammiferi.push(currentAnimal);
+
+    }
+
+}
+
+//Stampiamo in console l'array mammiferi[]
+
+console.log(mammiferi);
